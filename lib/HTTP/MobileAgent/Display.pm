@@ -80,7 +80,7 @@ returns color depth of the display.
 
 =head1 USING EXTERNAL MAP FILE
 
-If the environment variable DOCOMO_MAP exists, use the (xml) data indicated for $DisplayMap.
+If the environment variable DOCOMO_MAP exists, the specified XML data will be used for $DisplayMap.
 
 ex) Please add the following code.
 

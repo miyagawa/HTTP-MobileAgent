@@ -1,7 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent
 
 0.20  Sun Oct 26 07:34:53 JST 2003
-        * if the environment variable DOCOMO_MAP exists, use the (xml) data indicated
+        * if the environment variable DOCOMO_MAP exists,
+          the specified XML data will be used
           for $HTTP::MobileAgent::DoCoMoDisplayMap::DisplayMap.
 
 0.19  Wed Oct 8 14:01:55 JST 2003
