@@ -3,10 +3,11 @@ package HTTP::MobileAgent::NonMobile;
 use strict;
 use base qw(HTTP::MobileAgent);
 
-# various preferences
-
 sub parse {
     my $self = shift;
+    my($name, $version) = split m!/!, $self->user_agent;
+    $self->{name} = $name;
+    $self->{version} = $version;
 }
 
 sub is_mobile { 0 }
@@ -22,7 +23,7 @@ HTTP::MobileAgent::NonMobile - Non-Mobile Agent implementation
 
   use HTTP::MobileAgent;
 
-  $ENV{HTTP_USER_AGENT} = "Mozilla/4.0"
+  local $ENV{HTTP_USER_AGENT} = "Mozilla/4.0";
   my $agent = HTTP::MobileAgent->new;
 
 =head1 DESCRIPTION
@@ -32,14 +33,7 @@ implements non-mobile or unimplemented user agents.
 
 =head1 METHODS
 
-See L<HTTP::MobileAgent/"METHODS"> for common methods. Here are
-HTTP::MobileAgent::NonMobile specific methods.
-
-=back
-
-=head1 TODO
-
-=over 4
+See L<HTTP::MobileAgent/"METHODS"> for common methods.
 
 =back
 
