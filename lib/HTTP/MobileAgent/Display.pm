@@ -80,11 +80,11 @@ returns color depth of the display.
 
 =head1 USING EXTERNAL MAP FILE
 
-If the environment variable DoCoMoMap exists, use the (xml) data indicated for $DisplayMap.
+If the environment variable DOCOMO_MAP exists, use the (xml) data indicated for $DisplayMap.
 
 ex) Please add the following code.
 
-  $ENV{DoCoMoMap} = '/path/to/DoCoMoMap.xml';
+  $ENV{DOCOMO_MAP} = '/path/to/DoCoMoMap.xml';
 
 =back
 

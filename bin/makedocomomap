@@ -50,9 +50,9 @@ use vars qw(@EXPORT_OK $DisplayMap);
 
 BEGIN {
     require XML::Simple;
-    if ($ENV{DoCoMoMap}) {
+    if ($ENV{DOCOMO_MAP}) {
         my $xml = XML::Simple->new;
-        eval q{$DisplayMap = $xml->XMLin($ENV{DoCoMoMap});};
+        eval q{$DisplayMap = $xml->XMLin($ENV{DOCOMO_MAP});};
         warn "using normal hash map: $@" if $@;
     }
 }
