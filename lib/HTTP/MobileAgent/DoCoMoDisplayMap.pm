@@ -9,7 +9,16 @@ use base qw(Exporter);
 use vars qw(@EXPORT_OK $DisplayMap);
 @EXPORT_OK = qw($DisplayMap);
 
-$DisplayMap = {
+BEGIN {
+    require XML::Simple;
+    if ($ENV{DoCoMoMap}) {
+        my $xml = XML::Simple->new;
+        eval q{$DisplayMap = $xml->XMLin($ENV{DoCoMoMap});};
+        warn "using normal hash map: $@" if $@;
+    }
+}
+
+$DisplayMap ||= {
   'N251IS' => {
     'width' => 132,
     'height' => 140,
