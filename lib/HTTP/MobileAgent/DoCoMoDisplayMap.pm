@@ -549,7 +549,37 @@ $DisplayMap = {
     'height' => 112,
     'depth' => 4096,
     'color' => 1
-  }
+  },
+  'D252I' => {
+    'width' => 176,
+    'height' => 198,
+    'depth' => 262144,
+    'color' => 1
+  },
+  'SH252I' => {
+    'width' => 240,
+    'height' => 252,
+    'depth' => 262144,
+    'color' => 1
+  },
+  'N505IS' => {
+    'width' => 240,
+    'height' => 270,
+    'depth' => 262144,
+    'color' => 1
+  },
+  'D505IS' => {
+    'width' => 240,
+    'height' => 270,
+    'depth' => 262144,
+    'color' => 1
+  },
+  'P505IS' => {
+    'width' => 240,
+    'height' => 266,
+    'depth' => 65536,
+    'color' => 1
+  },
 };
 
 
