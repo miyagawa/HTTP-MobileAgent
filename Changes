@@ -1,5 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent
 
+0.21
+	- Added documentation for status() method in DoCoMo.
+
 0.20  Sun Oct 26 07:34:53 JST 2003
         * if the environment variable DOCOMO_MAP exists,
           the specified XML data will be used
