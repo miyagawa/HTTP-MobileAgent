@@ -10,10 +10,12 @@ use vars qw(@EXPORT_OK $DisplayMap);
 @EXPORT_OK = qw($DisplayMap);
 
 BEGIN {
-    require XML::Simple;
     if ($ENV{DOCOMO_MAP}) {
-        my $xml = XML::Simple->new;
-        eval q{$DisplayMap = $xml->XMLin($ENV{DOCOMO_MAP});};
+        eval q{
+            require XML::Simple;
+            my $xml = XML::Simple->new;
+            $DisplayMap = $xml->XMLin($ENV{DOCOMO_MAP});
+        };
         warn "using normal hash map: $@" if $@;
     }
 }
